@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Routes from './Components/Routes/Routes';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">CPO Web App</h1>
-        </header>
-        <p className="App-intro">
-          
-        </p>
-      </div>
+      <Router>
+        <Routes />
+      </Router>
     );
   }
 }
