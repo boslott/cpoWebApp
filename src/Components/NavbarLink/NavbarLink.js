@@ -11,7 +11,7 @@ export default class NavbarLink extends Component {
           'navbar__link navbar__link-active' : 'navbar__link'
         }
       >
-        <h2>{this.props.text}</h2>
+        <h3>{this.props.text}</h3>
       </Link>
     );
   }
