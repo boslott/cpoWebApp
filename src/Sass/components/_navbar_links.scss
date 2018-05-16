@@ -1,0 +1,26 @@
+.navbar__link {
+  color: $yellow;
+  padding: 0 1.5rem;
+  border-right: 1px solid $gray;
+
+  &s-box {
+    margin-right: 1rem;
+  }
+
+  &:link, &:visited {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  &:hover {
+    color: $orange;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &-active {
+    color: $orange;
+  }
+}

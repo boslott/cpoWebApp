@@ -1,0 +1,41 @@
+.navbar__outer {
+  background-color: #2779BD; }
+
+.navbar__inner {
+  margin-right: 2rem;
+  display: flex;
+  align-items: center; }
+
+.navbar__items {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 5vw; }
+
+.logo img {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.6rem;
+  margin-left: none; }
+
+.navbar__link {
+  color: #FFED4A;
+  padding: 0 1.5rem;
+  border-right: 1px solid #B8C2CC; }
+  .navbar__links-box {
+    margin-right: 1rem; }
+  .navbar__link:link, .navbar__link:visited {
+    text-decoration: none;
+    display: inline-block; }
+  .navbar__link:hover {
+    color: #DE751F; }
+  .navbar__link:last-child {
+    border-right: none; }
+  .navbar__link-active {
+    color: #DE751F; }

@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient , HttpLink, InMemoryCache } from 'apollo-boost';
-import { setContext } from 'apollo-link-context';
+// import { setContext } from 'apollo-link-context';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import { faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle, faUsers } from '@fortawesome/fontawesome-free-solid'
+import { faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle, faUsers } from '@fortawesome/fontawesome-free-solid';
+import './index.css';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
