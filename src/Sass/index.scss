@@ -2,7 +2,7 @@
 @import './base/_base.scss';
 
 // Layout
-// @import './layout/_row.scss';
+@import './layout/_layout.scss';
 
 // Abstracts
 @import './abstracts/_colors.scss';
@@ -12,4 +12,5 @@
 @import './components/_navbar.scss';
 @import './components/_logo.scss';
 @import './components/_navbar_links.scss';
-// @import './components/_WrongLetters.scss';
+@import './components/_buttons.scss';
+@import './components/_form.scss';
