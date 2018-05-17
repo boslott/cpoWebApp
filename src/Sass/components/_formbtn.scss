@@ -10,9 +10,8 @@
     border-radius: 999px;
     transition: all 0.2s;
     text-decoration: none;
-    outline: none;
     border: none;
-    text-shadow: 0 0.1rem 0.1rem $gray-dark
+    text-shadow: 0 0.1rem 0.1rem $gray-dark;
   }
   
   &:hover {
@@ -28,6 +27,10 @@
     outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem $gray;
+  }
+
+  &__row {
+    padding: 2rem;
   }
 
 }

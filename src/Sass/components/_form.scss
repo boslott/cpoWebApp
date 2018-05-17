@@ -16,4 +16,23 @@
     font-weight: bold;
     color: $gray-medium;
   }
+
+  &__link-para {
+    padding: 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.1rem;
+
+    &:link, &:visited {
+      color: $blue;
+    }
+
+    &:hover, &:active {
+      color: $orange;
+      text-decoration: none;
+    }
+  }
 }
