@@ -21,7 +21,7 @@ export default class RegistrationForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    this.props.history.push('/dashboard');
     this.setState({ name: '', email: '', password: '', passwordConfirm: '' });
   }
 
@@ -69,8 +69,13 @@ export default class RegistrationForm extends Component {
             placeholder='Confirm Password'
           />
         </FormGroup>
-        <Row className='btn-row'>
+        <Row className='text-center formbtn__row'>
           <a className='formbtn' onClick={this.handleFormSubmit}>Submit</a>
+        </Row>
+        <Row className='text-center'>
+          <p className='form__link-para'>
+            Already have an account? <a className='form__link' onClick={() => this.props.history.push('/login')}>LOGIN</a> now
+          </p>
         </Row>
       </form>
     );

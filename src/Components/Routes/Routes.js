@@ -3,11 +3,16 @@ import { Switch } from 'react-router-dom';
 
 import AppliedRoute from '../AppliedRoute/AppliedRoute';
 import Login from '../../Pages/Login/Login';
+import Registration from '../../Pages/Registration/Registration';
+import Dashboard from '../../Pages/Dashboard/Dashboard';
 // import NotFound from '../../Pages/NotFound/NotFound';
 
 export default () => (
   <Switch>
     <AppliedRoute exact path='/' component={Login} />
+    <AppliedRoute exact path='/login' component={Login} />
+    <AppliedRoute exact path='/registration' component={Registration} />
+    <AppliedRoute exact path='/dashboard' component={Dashboard} />
     {/* <AppliedRoute component={NotFound} /> */}
   </Switch>
 );
