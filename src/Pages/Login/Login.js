@@ -4,13 +4,14 @@ import { Grid, Row } from 'react-bootstrap';
 import Navbar from '../../Components/Navbar/Navbar';
 import LoginForm from '../../Components/LoginForm/LoginForm';
 import RegistrationForm from '../../Components/RegistrationForm/RegistrationForm';
+import Footer from '../../Components/Footer/Footer';
 
 export default class Login extends Component {
   render() {
     return (
-      <section className='login'>
+      <div>
         <Navbar />
-        <Grid>
+        <Grid componentClass='section' bsClass='container login'>
           <Row className='form-row'>
             <LoginForm history={this.props.history} />
           </Row>
@@ -18,7 +19,8 @@ export default class Login extends Component {
             <RegistrationForm history={this.props.history} />
           </Row>
         </Grid>
-      </section>
+        <Footer />
+      </div>
     );
   }
 }

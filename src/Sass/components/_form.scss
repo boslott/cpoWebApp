@@ -1,12 +1,13 @@
 .form {
-  padding: 2rem;
+  padding: 3rem;
   margin: 1rem;
   border-style: solid;
   border-width: 0.1rem;
   border-color: $gray;
   border-radius: 4px;
   box-shadow: 0 0.3rem 0.6rem $gray;
-  width: 80%;
+  width: 60%;
+  background-color: $white;
 
   &__title {
     text-align: center;

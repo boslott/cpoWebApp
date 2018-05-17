@@ -1,11 +1,11 @@
+// Abstracts
+@import './abstracts/_colors.scss';
+
 // Base
 @import './base/_base.scss';
 
 // Layout
 @import './layout/_layout.scss';
-
-// Abstracts
-@import './abstracts/_colors.scss';
 
 // Components
 @import './components/_test.scss';
@@ -14,3 +14,4 @@
 @import './components/_navbar_links.scss';
 @import './components/_buttons.scss';
 @import './components/_form.scss';
+@import './components/_footer.scss';
