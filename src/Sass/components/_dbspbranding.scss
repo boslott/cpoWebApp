@@ -1,0 +1,22 @@
+.dbsp-branding {
+  height: 7rem;
+  background-color: $orange;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: space-around;
+
+  border-bottom: solid 0.2rem $orange-dark;
+
+  &__logo {
+    margin: 0.8rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__text {
+    color: $white;
+    font-weight: bold;
+    text-shadow: 0 0.1rem 0.2rem $black;
+    text-transform: uppercase;
+  }
+}
