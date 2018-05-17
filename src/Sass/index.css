@@ -11,32 +11,42 @@ body {
   justify-content: center; }
 
 .navbar__outer {
-  background-color: #2779BD; }
+  background-color: #2779BD;
+  height: 9rem; }
+
+.navbar__inner {
+  height: 100%; }
 
 .navbar__items {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
-  outline: 1px dotted red; }
+  padding: 3rem 0;
+  margin: auto;
+  position: relative;
+  height: 100%; }
 
 .logo {
   padding: 0.1rem;
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0; }
+  margin: 2rem 0;
+  position: absolute;
+  left: 0;
+  height: 100%; }
 
 .logo img {
   background-color: #fff;
   border-radius: 50%;
   padding: 0.6rem;
-  margin-left: none; }
+  margin-bottom: 2rem; }
 
 .navbar__link {
   color: #FFED4A;
   padding: 0 1.5rem;
   border-right: 1px solid #B8C2CC; }
   .navbar__links-box {
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    position: absolute;
+    right: 0; }
   .navbar__link:link, .navbar__link:visited {
     text-decoration: none;
     display: inline-block; }

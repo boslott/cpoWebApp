@@ -1,14 +1,15 @@
 .logo {
   padding: 0.1rem;
   // width: 8rem;
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
 }
 
 .logo img {
   background-color: $white;
   border-radius: 50%;
   padding: 0.6rem;
-  margin-left: none;
+  margin-bottom: 2rem;
 }

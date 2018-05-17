@@ -20,7 +20,7 @@ export default class LoginForm extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log('Logged in!');
-    // this.props.history.push('/dashboard');
+    this.props.history.push('/dashboard');
     this.setState({ email: '', password: '' });
   }
 
