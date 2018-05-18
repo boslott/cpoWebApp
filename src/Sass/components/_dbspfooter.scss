@@ -1,0 +1,23 @@
+.dbsp-footer {
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+  width: 100%;
+  border-top: 0.02rem solid $orange;
+
+  &__help-box {
+    background-color: $orange;
+    padding: 0.2rem 2rem;
+    text-align: center;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 0.8rem 2rem;
+    color: $white;
+  }
+
+  &__help-text {
+    margin-left: 0.5rem;
+  }
+}

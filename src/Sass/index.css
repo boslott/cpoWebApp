@@ -28,14 +28,16 @@ body {
 .db-side-panel {
   background-color: #1C3D5A;
   height: 100vh;
-  min-width: 25rem; }
+  min-width: 25rem;
+  position: relative; }
 
 .dbsp-branding {
   height: 7rem;
   background-color: #DE751F;
   padding: 0.1rem;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center; }
   .dbsp-branding__logo {
     margin: 0.8rem;
     width: 5rem;
@@ -44,7 +46,28 @@ body {
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0.1rem 0.2rem #22292F;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-right: 2rem; }
+
+.dbsp-footer {
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+  width: 100%;
+  border-top: 0.02rem solid #DE751F; }
+  .dbsp-footer__help-box {
+    background-color: #DE751F;
+    padding: 0.2rem 2rem;
+    text-align: center;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 0.8rem 2rem;
+    color: #fff; }
+  .dbsp-footer__help-text {
+    margin-left: 0.5rem; }
 
 .dbsp-mainnav {
   padding: 3rem 1rem; }
@@ -54,7 +77,8 @@ body {
   font-size: 1.8rem;
   display: flex;
   align-items: center;
-  letter-spacing: 0.08rem; }
+  letter-spacing: 0.08rem;
+  color: #fff; }
   .dbsp-navlink:link, .dbsp-navlink:visited {
     text-decoration: none;
     color: #fff; }
