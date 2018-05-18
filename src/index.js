@@ -5,14 +5,14 @@ import { ApolloClient , HttpLink, InMemoryCache } from 'apollo-boost';
 // import { setContext } from 'apollo-link-context';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import { faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle, faUsers } from '@fortawesome/fontawesome-free-solid';
+import { faTachometerAlt, faHome, faPlusSquare, faClipboardList, faTint, faUserCircle, faSignOutAlt } from '@fortawesome/fontawesome-free-solid';
 import './index.css';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 // Font Awesome icons library
-fontawesome.library.add(brands, faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle, faUsers);
+fontawesome.library.add(brands, faHome, faTachometerAlt, faPlusSquare, faClipboardList, faTint, faUserCircle, faSignOutAlt);
 
 const httpLink = new HttpLink({
   uri: 'https://api.graph.cool/simple/v1/cjg3pd3ei232o0128tnatoefk',

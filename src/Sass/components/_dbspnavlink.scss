@@ -1,0 +1,22 @@
+.dbsp-navlink {
+  height: 5rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.08rem;
+
+  &:link, &:visited {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: $orange;
+  }
+
+  &__icon {
+    text-align: center;
+    margin-left: 1.6rem;
+  }
+}

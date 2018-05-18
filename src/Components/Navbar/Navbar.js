@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row} from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 import '../../Sass/index.css';
 import Logo from '../Logo/Logo';
@@ -11,8 +11,12 @@ export default class Navbar extends Component {
       <Grid fluid componentClass='nav' className='navbar__outer'>
         <Grid className='navbar__inner'>
           <Row className='navbar__items'>
-            <Logo />
-            <NavbarLinks />
+            <Col xs={3} className='navbar__item'>
+              <Logo />
+            </Col>
+            <Col md={9} className='navbar__item'>
+              <NavbarLinks />
+            </Col>
           </Row>
         </Grid>
       </Grid>

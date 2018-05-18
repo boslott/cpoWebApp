@@ -26,18 +26,16 @@ body {
   display: flex; }
 
 .db-side-panel {
-  background-color: #2779BD;
+  background-color: #1C3D5A;
   height: 100vh;
-  min-width: 25rem;
-  border-right: solid 0.15rem #613B1F; }
+  min-width: 25rem; }
 
 .dbsp-branding {
   height: 7rem;
   background-color: #DE751F;
   padding: 0.1rem;
   display: flex;
-  justify-content: space-around;
-  border-bottom: solid 0.2rem #613B1F; }
+  justify-content: space-around; }
   .dbsp-branding__logo {
     margin: 0.8rem;
     width: 5rem;
@@ -47,6 +45,25 @@ body {
     font-weight: bold;
     text-shadow: 0 0.1rem 0.2rem #22292F;
     text-transform: uppercase; }
+
+.dbsp-mainnav {
+  padding: 3rem 1rem; }
+
+.dbsp-navlink {
+  height: 5rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.08rem; }
+  .dbsp-navlink:link, .dbsp-navlink:visited {
+    text-decoration: none;
+    color: #fff; }
+  .dbsp-navlink:hover, .dbsp-navlink:active {
+    text-decoration: none;
+    color: #DE751F; }
+  .dbsp-navlink__icon {
+    text-align: center;
+    margin-left: 1.6rem; }
 
 .footer {
   margin-top: auto;
@@ -121,7 +138,7 @@ body {
   margin-bottom: 2rem; }
 
 .navbar__outer {
-  background-color: #2779BD;
+  background-color: #1C3D5A;
   height: 9rem; }
 
 .navbar__inner {
@@ -132,18 +149,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0;
-  margin: auto;
-  position: relative;
   height: 100%; }
+
+.navbar__item {
+  flex: 1; }
 
 .navbar__link {
   color: #FFED4A;
   padding: 0 1.5rem;
   border-right: 1px solid #B8C2CC; }
   .navbar__links-box {
-    margin-right: 1rem;
-    position: absolute;
-    right: 0; }
+    margin-right: 1rem; }
   .navbar__link:link, .navbar__link:visited {
     text-decoration: none;
     display: inline-block; }
