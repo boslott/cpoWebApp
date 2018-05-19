@@ -8,7 +8,7 @@ export default class DBCPLogCalendar extends Component {
   // static propTypes = {};
 
   state = {
-    yearRound: true,
+    yearRound: false,
   }
 
   render() {
