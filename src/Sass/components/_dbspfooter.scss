@@ -1,23 +1,26 @@
 .dbsp-footer {
   position: absolute;
   bottom: 0;
-  height: 6rem;
+  height: 6.2rem;
   width: 100%;
   border-top: 0.02rem solid $orange;
+  display: flex;
+  align-items: center;
 
   &__help-box {
     background-color: $orange;
-    padding: 0.2rem 2rem;
-    text-align: center;
+    width: 8.2rem;
+    height: 3rem;
     border-radius: 999px;
     display: flex;
     align-items: center;
-    width: 40%;
+    justify-content: center;
     margin: 0.8rem 2rem;
     color: $white;
   }
-
+  
   &__help-text {
-    margin-left: 0.5rem;
+    margin-left: 0.6rem;
+    font-size: 1.7rem;
   }
 }
