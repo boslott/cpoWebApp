@@ -1,6 +1,9 @@
 .text-center {
   text-align: center; }
 
+.ml-2 {
+  margin-left: 3rem; }
+
 body {
   background-color: #F1F5F8; }
 
@@ -23,13 +26,84 @@ body {
   justify-content: center; }
 
 .dashboard {
-  display: flex; }
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll; }
+
+.db-content-panel {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  height: 100%;
+  position: absolute;
+  left: 25rem;
+  top: 0;
+  overflow: scroll; }
+
+.dbcp-header {
+  height: 8rem;
+  width: 100%; }
+  .dbcp-header__title {
+    font-size: 5rem;
+    color: #1C3D5A;
+    margin-left: 10rem;
+    text-transform: uppercase; }
+
+.dbcp-log-calendar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  overflow: scroll; }
+  .dbcp-log-calendar__title {
+    font-size: 5rem;
+    color: #1C3D5A;
+    font-weight: 100;
+    border-bottom: 2px solid #DE751F;
+    width: 20rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem; }
+  .dbcp-log-calendar__months {
+    width: 80%;
+    display: flex;
+    flex-direction: column; }
+  .dbcp-log-calendar__month {
+    text-align: left;
+    padding-left: 15rem;
+    font-size: 3rem;
+    min-width: 100%;
+    text-decoration: none;
+    color: #1C3D5A;
+    cursor: pointer; }
+    .dbcp-log-calendar__month-icon {
+      margin-right: 3rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem; }
+    .dbcp-log-calendar__month a {
+      color: #1C3D5A; }
+      .dbcp-log-calendar__month a:link, .dbcp-log-calendar__month a:visited, .dbcp-log-calendar__month a:active {
+        text-decoration: none;
+        color: #1C3D5A; }
+      .dbcp-log-calendar__month a:hover {
+        color: #DE751F;
+        text-decoration: none; }
+  .dbcp-log-calendar__weeks {
+    padding: 1rem 9rem; }
+  .dbcp-log-calendar__days-text {
+    display: inline-block; }
 
 .db-side-panel {
   background-color: #1C3D5A;
   height: 100vh;
   min-width: 25rem;
-  position: relative; }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; }
 
 .dbsp-branding {
   height: 7rem;
