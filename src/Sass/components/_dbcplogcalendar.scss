@@ -62,4 +62,15 @@
   &__days-text {
     display: inline-block;
   }
+
+  &__days-box {
+    display: flex;
+    flex-direction: row;
+    padding-left: 6rem;
+  }
+
+  &__day {
+    width: 7rem;
+    margin: 1rem;
+  }
 }

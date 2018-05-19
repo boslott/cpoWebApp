@@ -95,6 +95,13 @@ body {
     padding: 1rem 9rem; }
   .dbcp-log-calendar__days-text {
     display: inline-block; }
+  .dbcp-log-calendar__days-box {
+    display: flex;
+    flex-direction: row;
+    padding-left: 6rem; }
+  .dbcp-log-calendar__day {
+    width: 7rem;
+    margin: 1rem; }
 
 .db-side-panel {
   background-color: #1C3D5A;

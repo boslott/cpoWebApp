@@ -49,7 +49,7 @@ export default class DBCPCalMonth extends Component {
             <DBCPCalWeek wk='2' wkNums='8 - 14' />
             <DBCPCalWeek wk='3' wkNums='15 - 21' />
             <DBCPCalWeek wk='4' wkNums='22 - 29' />
-            <DBCPCalWeek wk='5' wkNums='30 - 31' />
+            {this.props.month !== 'February' ? <DBCPCalWeek wk='5' wkNums='30 - 31' /> : ''}
           </div>
         ) : '' }
       </div>
