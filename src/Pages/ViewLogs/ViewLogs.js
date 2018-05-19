@@ -4,12 +4,12 @@ import '../../Sass/index.css';
 import DBSidePanel from '../../Components/DBSidePanel/DBSidePanel';
 import DBContentPanel from '../../Components/DBContentPanel/DBContentPanel';
 
-export default class Dashboard extends Component {
+export default class ViewLogs extends Component {
   render() {
     return (
-      <div className='dashboard'>
+      <div className='dashboard view-logs'>
         <DBSidePanel />
-        <DBContentPanel panelType='Dashboard' />
+        <DBContentPanel panelType='view' />
       </div>
     );
   }

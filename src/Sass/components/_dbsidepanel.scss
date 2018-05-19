@@ -2,5 +2,8 @@
   background-color: $blue-dark;
   height: 100vh;
   min-width: 25rem;
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
