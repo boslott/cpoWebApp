@@ -14,7 +14,7 @@ export default class DBCPHeader extends Component {
     return (
       <header className='dbcp-header'>
         <h2 className='dbcp-header__title'>{title}</h2>
-        {(title === 'view' || title === 'chemicals') ? 
+        {(title === 'View' || title === 'chemicals') ? 
           <DBCPHeaderOpts changeToYear={this.props.changeToYear} changeToSeasonal={this.props.changeToSeasonal} /> : '' }
       </header>
     );

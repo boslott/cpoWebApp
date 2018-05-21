@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import '../../../Sass/index.css';
 import DBCPCalMonth from '../DBCPCalMonth/DBCPCalMonth';
-import LogOptions from '../../LogOptions/LogOptions';
 
 export default class DBCPLogCalendar extends Component {
   
@@ -11,33 +10,32 @@ export default class DBCPLogCalendar extends Component {
   render() {
     return (
       <div className='dbcp-log-calendar'>
-        <LogOptions />
         <h3 className='dbcp-log-calendar__title'>
           {this.props.year}
         </h3>
         { this.props.yearRound ? (
           <div className='dbcp-log-calendar__months'>
-            <DBCPCalMonth month='January' />
-            <DBCPCalMonth month='February' />
-            <DBCPCalMonth month='March' />
-            <DBCPCalMonth month='April' />
-            <DBCPCalMonth month='May' />
-            <DBCPCalMonth month='June' />
-            <DBCPCalMonth month='July' />
-            <DBCPCalMonth month='August' />
-            <DBCPCalMonth month='September' />
-            <DBCPCalMonth month='October' />
-            <DBCPCalMonth month='November' />
-            <DBCPCalMonth month='December' />
+            <DBCPCalMonth year={this.props.year} month='January' />
+            <DBCPCalMonth year={this.props.year} month='February' />
+            <DBCPCalMonth year={this.props.year} month='March' />
+            <DBCPCalMonth year={this.props.year} month='April' />
+            <DBCPCalMonth year={this.props.year} month='May' />
+            <DBCPCalMonth year={this.props.year} month='June' />
+            <DBCPCalMonth year={this.props.year} month='July' />
+            <DBCPCalMonth year={this.props.year} month='August' />
+            <DBCPCalMonth year={this.props.year} month='September' />
+            <DBCPCalMonth year={this.props.year} month='October' />
+            <DBCPCalMonth year={this.props.year} month='November' />
+            <DBCPCalMonth year={this.props.year} month='December' />
           </div>
         ) : (
           <div className='dbcp-log-calendar__months'>
-            <DBCPCalMonth month='April' />
-            <DBCPCalMonth month='May' />
-            <DBCPCalMonth month='June' />
-            <DBCPCalMonth month='July' />
-            <DBCPCalMonth month='August' />
-            <DBCPCalMonth month='September' />
+            <DBCPCalMonth year={this.props.year}  month='April' />
+            <DBCPCalMonth year={this.props.year}  month='May' />
+            <DBCPCalMonth year={this.props.year}  month='June' />
+            <DBCPCalMonth year={this.props.year}  month='July' />
+            <DBCPCalMonth year={this.props.year}  month='August' />
+            <DBCPCalMonth year={this.props.year}  month='September' />
           </div>
         )}
       </div>

@@ -7,6 +7,7 @@ import Registration from '../../Pages/Registration/Registration';
 import Dashboard from '../../Pages/Dashboard/Dashboard';
 import ViewLogs from '../../Pages/ViewLogs/ViewLogs';
 import NewLog from '../../Pages/NewLog/NewLog';
+import SingleDayView from '../../Pages/SingleDayView/SingleDayView';
 // import NotFound from '../../Pages/NotFound/NotFound';
 
 export default () => (
@@ -17,6 +18,7 @@ export default () => (
     <AppliedRoute exact path='/dashboard' component={Dashboard} />
     <AppliedRoute exact path='/view-logs' component={ViewLogs} />
     <AppliedRoute exact path='/new-log' component={NewLog} />
+    <AppliedRoute exact path='/view-logs/:completedOn' component={SingleDayView} />
     {/* <AppliedRoute component={NotFound} /> */}
   </Switch>
 );

@@ -45,11 +45,11 @@ export default class DBCPCalMonth extends Component {
         </a>
         {this.state.toggle.toggled ? (
           <div className='dbcp-log-calendar__weeks'>
-            <DBCPCalWeek wk='1' wkNums='1 - 7' />
-            <DBCPCalWeek wk='2' wkNums='8 - 14' />
-            <DBCPCalWeek wk='3' wkNums='15 - 21' />
-            <DBCPCalWeek wk='4' wkNums='22 - 29' />
-            {this.props.month !== 'February' ? <DBCPCalWeek wk='5' wkNums='30 - 31' /> : ''}
+            <DBCPCalWeek year={this.props.year} month={this.props.month} wk='1' wkNums='1 - 7' />
+            <DBCPCalWeek year={this.props.year} month={this.props.month} wk='2' wkNums='8 - 14' />
+            <DBCPCalWeek year={this.props.year} month={this.props.month} wk='3' wkNums='15 - 21' />
+            <DBCPCalWeek year={this.props.year} month={this.props.month} wk='4' wkNums='22 - 29' />
+            {this.props.month !== 'February' ? <DBCPCalWeek year={this.props.year} month={this.props.month} wk='5' wkNums='30 - 31' /> : ''}
           </div>
         ) : '' }
       </div>

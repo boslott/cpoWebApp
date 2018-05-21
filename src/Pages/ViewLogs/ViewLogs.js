@@ -9,7 +9,7 @@ export default class ViewLogs extends Component {
     return (
       <div className='dashboard view-logs'>
         <DBSidePanel />
-        <DBContentPanel panelType='view' />
+        <DBContentPanel panelType='view' panelTitle='View' />
       </div>
     );
   }

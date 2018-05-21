@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
     return (
       <div className='dashboard'>
         <DBSidePanel />
-        <DBContentPanel panelType='Dashboard' />
+        <DBContentPanel panelType='Dashboard' panelTitle='Dashboard' />
       </div>
     );
   }
