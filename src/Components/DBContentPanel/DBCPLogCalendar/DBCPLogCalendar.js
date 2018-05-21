@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 
 import '../../../Sass/index.css';
 import DBCPCalMonth from '../DBCPCalMonth/DBCPCalMonth';
+import LogOptions from '../../LogOptions/LogOptions';
 
 export default class DBCPLogCalendar extends Component {
   
   // static propTypes = {};
 
-  state = {
-    yearRound: false,
-  }
-
   render() {
     return (
       <div className='dbcp-log-calendar'>
+        <LogOptions />
         <h3 className='dbcp-log-calendar__title'>
           {this.props.year}
         </h3>
-        { this.state.yearRound ? (
+        { this.props.yearRound ? (
           <div className='dbcp-log-calendar__months'>
             <DBCPCalMonth month='January' />
             <DBCPCalMonth month='February' />

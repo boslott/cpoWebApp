@@ -44,12 +44,36 @@ body {
 
 .dbcp-header {
   height: 8rem;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
   .dbcp-header__title {
     font-size: 5rem;
     color: #1C3D5A;
     margin-left: 10rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 30%; }
+  .dbcp-header__opts-btn {
+    transition: all 0.2s;
+    margin: 2rem 1.5rem;
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    background-color: #DE751F;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    outline: none; }
+    .dbcp-header__opts-btn:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem #B8C2CC;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer; }
+    .dbcp-header__opts-btn:active, .dbcp-header__opts-btn:focus {
+      outline: none;
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem #B8C2CC; }
 
 .dbcp-log-calendar {
   display: flex;
@@ -97,11 +121,11 @@ body {
     display: inline-block; }
   .dbcp-log-calendar__days-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 6rem; }
   .dbcp-log-calendar__day {
     width: 7rem;
-    margin: 1rem; }
+    margin-left: 1rem; }
 
 .db-side-panel {
   background-color: #1C3D5A;
@@ -244,6 +268,27 @@ body {
 .logo img {
   padding: 0.6rem;
   margin-bottom: 2rem; }
+
+.log-options__btn-box {
+  width: 100%; }
+
+.log-options__btn {
+  background-color: #2779BD;
+  color: #fff;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  transition: all 0.2s; }
+  .log-options__btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem #B8C2CC;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer; }
+  .log-options__btn:active, .log-options__btn:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem #B8C2CC; }
 
 .navbar__outer {
   background-color: #1C3D5A;

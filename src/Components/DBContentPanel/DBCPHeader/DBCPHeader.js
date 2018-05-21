@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import '../../../Sass/index.css';
+import DBCPHeaderOpts from '../DBCPHeaderOpts/DBCPHeaderOpts';
 
 export default class DBCPHeader extends Component {
 
@@ -9,9 +10,12 @@ export default class DBCPHeader extends Component {
   // }
 
   render() {
+    const { title } = this.props;
     return (
       <header className='dbcp-header'>
-        <h2 className='dbcp-header__title'>{this.props.title}</h2>
+        <h2 className='dbcp-header__title'>{title}</h2>
+        {(title === 'view' || title === 'chemicals') ? 
+          <DBCPHeaderOpts changeToYear={this.props.changeToYear} changeToSeasonal={this.props.changeToSeasonal} /> : '' }
       </header>
     );
   }
