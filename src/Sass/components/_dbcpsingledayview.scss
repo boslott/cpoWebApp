@@ -1,0 +1,15 @@
+.dbcpsingle-day-view {
+
+
+  &__btn-row {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+  }
+
+  &__log-row {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+  }
+}

@@ -9,7 +9,7 @@ export default class NewLog extends Component {
     return (
       <div className='dashboard new-log'>
         <DBSidePanel />
-        <DBContentPanel panelType='New' />
+        <DBContentPanel panelType='New' panelTitle='New' />
       </div>
     );
   }
