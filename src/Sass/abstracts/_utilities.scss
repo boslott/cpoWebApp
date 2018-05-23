@@ -2,10 +2,37 @@
   text-align: center;
 }
 
+.flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-jc-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-ai-center {
+  display: center;
+  align-items: center;
+}
+
 .ml-2 {
   margin-left: 3rem;
 }
 
 .w60 {
   width: 60%;
+}
+
+.w80 {
+  width: 80%;
+}
+
+.odd-row {
+  border-style: solid;
+  border-color: $gray;
+  border-width: 0.1rem 0;
+  padding: 1rem;
 }

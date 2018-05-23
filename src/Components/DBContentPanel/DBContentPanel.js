@@ -24,7 +24,7 @@ export default class DBContentPanel extends Component {
       <main className='db-content-panel'>
         <DBCPHeader title={this.props.panelTitle} changeToYear={this.changeToYear} changeToSeasonal={this.changeToSeasonal} />
         {(this.props.panelType === 'view' || this.props.panelType === 'chemicals') ? <DBCPLogCalendar year='2018' yearRound={this.state.yearRound} /> : '' }
-        {this.props.panelType === 'single-day-view' ? <DBCPSingleDayView /> : ''}
+        {this.props.panelType === 'single-day-view' ? <DBCPSingleDayView date={this.props.panelTitle} /> : ''}
       </main>
     );
   }

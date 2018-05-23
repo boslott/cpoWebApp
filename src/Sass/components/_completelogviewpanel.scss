@@ -1,0 +1,29 @@
+.complete-log-view-panel {
+  width: 90%;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $orange;
+    margin-bottom: 2rem;
+  }
+
+  &__info-box {
+    display: flex;
+  }
+
+  &__label {
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
+
+  &__data {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  &__data-unit {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+  }
+}

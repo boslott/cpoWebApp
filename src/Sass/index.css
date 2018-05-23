@@ -1,11 +1,33 @@
 .text-center {
   text-align: center; }
 
+.flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex-jc-center {
+  display: flex;
+  justify-content: center; }
+
+.flex-ai-center {
+  display: center;
+  align-items: center; }
+
 .ml-2 {
   margin-left: 3rem; }
 
 .w60 {
   width: 60%; }
+
+.w80 {
+  width: 80%; }
+
+.odd-row {
+  border-style: solid;
+  border-color: #B8C2CC;
+  border-width: 0.1rem 0;
+  padding: 1rem; }
 
 body {
   background-color: #F1F5F8; }
@@ -42,6 +64,9 @@ body {
     outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem #B8C2CC; }
+
+.active-btn {
+  background-color: #DE751F !important; }
 
 .formbtn, .formbtn:visited, .formbtn:link {
   padding: 1rem 7rem;
@@ -86,6 +111,25 @@ body {
   box-shadow: 0 0.3rem 0.6rem #B8C2CC;
   background-color: #fff; }
 
+.complete-log-view-panel {
+  width: 90%; }
+  .complete-log-view-panel__title {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #DE751F;
+    margin-bottom: 2rem; }
+  .complete-log-view-panel__info-box {
+    display: flex; }
+  .complete-log-view-panel__label {
+    margin-right: 2rem;
+    font-size: 2rem; }
+  .complete-log-view-panel__data {
+    font-size: 3rem;
+    font-weight: 300; }
+  .complete-log-view-panel__data-unit {
+    font-size: 2rem;
+    margin-left: 0.5rem; }
+
 .dashboard {
   display: flex;
   position: relative;
@@ -97,11 +141,12 @@ body {
   display: flex;
   flex-direction: column;
   width: 75vw;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   left: 25rem;
   top: 0;
-  overflow: scroll; }
+  overflow: scroll;
+  padding-top: 3rem; }
 
 .dbcp-header {
   height: 8rem;

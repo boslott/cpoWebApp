@@ -9,7 +9,6 @@ import { faTachometerAlt, faHome, faPlusSquare, faClipboardList, faTint, faUserC
 import './index.css';
 
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
 // Font Awesome icons library
 fontawesome.library.add(brands, faHome, faTachometerAlt, faPlusSquare, faClipboardList, faTint, faUserCircle, faSignOutAlt, faQuestionCircle, faChevronDown, faPlus, faMinus);
@@ -23,10 +22,24 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
+
+// Testing purposes, to be deleted when finished
+// client
+//   .query({
+//     query: gql`
+//       {
+//         allMainPoolCompleteLogs {
+//           id
+//         }
+//       }
+//     `
+//   }).then( result => console.log(result));
+
 ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,
   document.getElementById('root')
 );
-registerServiceWorker();
+
+
