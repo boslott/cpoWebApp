@@ -28,7 +28,8 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
     "react-router-dom": "^4.1.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-spinners": "^0.3.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src/Sass src/ -o src/",
