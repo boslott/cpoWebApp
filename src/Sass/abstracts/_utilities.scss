@@ -13,11 +13,6 @@
   justify-content: center;
 }
 
-.flex-ai-center {
-  display: center;
-  align-items: center;
-}
-
 .ml-2 {
   margin-left: 3rem;
 }
@@ -35,4 +30,8 @@
   border-color: $gray;
   border-width: 0.1rem 0;
   padding: 1rem;
+}
+
+.font-3rem {
+  font-size: 3rem;
 }

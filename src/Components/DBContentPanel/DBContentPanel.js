@@ -4,6 +4,7 @@ import '../../Sass/index.css';
 import DBCPHeader from './DBCPHeader/DBCPHeader';
 import DBCPLogCalendar from './DBCPLogCalendar/DBCPLogCalendar';
 import DBCPSingleDayView from './DBCPSingleDayView/DBCPSingleDayView';
+import DBCPNewLog from './DBCPNewLog/DBCPNewLog';
 
 export default class DBContentPanel extends Component {
 
@@ -25,6 +26,7 @@ export default class DBContentPanel extends Component {
         <DBCPHeader title={this.props.panelTitle} changeToYear={this.changeToYear} changeToSeasonal={this.changeToSeasonal} />
         {(this.props.panelType === 'view' || this.props.panelType === 'chemicals') ? <DBCPLogCalendar year='2018' yearRound={this.state.yearRound} /> : '' }
         {this.props.panelType === 'single-day-view' ? <DBCPSingleDayView date={this.props.panelTitle} /> : ''}
+        {this.props.panelType === 'New' ? <DBCPNewLog /> : ''}
       </main>
     );
   }
