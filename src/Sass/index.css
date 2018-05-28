@@ -10,10 +10,6 @@
   display: flex;
   justify-content: center; }
 
-.flex-ai-center {
-  display: center;
-  align-items: center; }
-
 .ml-2 {
   margin-left: 3rem; }
 
@@ -28,6 +24,9 @@
   border-color: #B8C2CC;
   border-width: 0.1rem 0;
   padding: 1rem; }
+
+.font-3rem {
+  font-size: 3rem; }
 
 body {
   background-color: #F1F5F8; }
@@ -49,6 +48,9 @@ body {
   margin-top: 3rem;
   display: flex;
   justify-content: center; }
+
+.log-form-row {
+  padding: 2rem; }
 
 .btn {
   text-transform: uppercase;
@@ -100,6 +102,10 @@ body {
   color: #fff;
   padding: 0.5rem 1rem;
   margin: 1rem; }
+
+.form-opt-btns {
+  margin: 2.5rem 0;
+  height: 8rem; }
 
 .card {
   padding: 3rem;
