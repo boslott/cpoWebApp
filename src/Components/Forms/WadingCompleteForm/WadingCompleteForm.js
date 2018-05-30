@@ -8,43 +8,33 @@ import gql from 'graphql-tag';
 import '../../../Sass/index.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const NEW_MAINPOOL_COMPLETE_LOG = gql`
-    mutation newMainPoolCompleteLog(
+import '../../../Sass/index.css';
+
+const NEW_WADINGPOOL_COMPLETE_LOG = gql`
+    mutation newWadingPoolCompleteLog(
       $cac: String
       $ch: String
-      $clVolume: String
       $completedOn: DateTime!
       $createdOn: DateTime
       $cya: String
       $fac: String
       $filterPressure1: String
-      $filterPressure2: String
-      $filterPressure3: String
-      $filterPressure4: String
       $flowRate: String
-      $orp: String
-      $phController: String
-      $phMan: String
+      $ph: String
       $ta: String
       $waterLevel: String
       $whoChecked: String!
     ) {
-      createMainPoolCompleteLog (
+      createWadingPoolCompleteLog (
         cac: $cac
         ch: $ch
-        clVolume: $clVolume
         completedOn: $completedOn
         createdOn: $createdOn
         cya: $cya
         fac: $fac
         filterPressure1: $filterPressure1
-        filterPressure2: $filterPressure2
-        filterPressure3: $filterPressure3
-        filterPressure4: $filterPressure4
         flowRate: $flowRate
-        orp: $orp
-        phController: $phController
-        phMan: $phMan
+        ph: $ph
         ta: $ta
         waterLevel: $waterLevel
         whoChecked: $whoChecked
@@ -54,24 +44,18 @@ const NEW_MAINPOOL_COMPLETE_LOG = gql`
     }
   `;
 
-export default class MainCompleteForm extends Component {
+export default class WadingCompleteForm extends Component {
 
   state = {
     cac: '',
     ch: '',
-    clVolume: '',
     completedOn: moment(),
     createdOn: moment(),
     cya: '',
     fac: '',
     filterPressure1: '',
-    filterPressure2: '',
-    filterPressure3: '',
-    filterPressure4: '',
     flowRate: '',
-    orp: '',
-    phController: '',
-    phMan: '',
+    ph: '',
     ta: '',
     waterLevel: '',
     whoChecked: '',
@@ -89,30 +73,23 @@ export default class MainCompleteForm extends Component {
   }
 
   render() {
-    console.log(this.state.completedOn)
     return (
-      <Mutation mutation={NEW_MAINPOOL_COMPLETE_LOG}>
-        {(newMainPoolCompleteLog, {data}) => (
+      <Mutation mutation={NEW_WADINGPOOL_COMPLETE_LOG}>
+        {(newWadingPoolCompleteLog, {data}) => (
           <form
-            className='main-complete-form'
+            className='wading-complete-form'
             onSubmit = {event => {
               event.preventDefault();
-              newMainPoolCompleteLog({ variables: {
+              newWadingPoolCompleteLog({ variables: {
                 cac: this.state.cac,
                 ch: this.state.ch,
-                clVolume: this.state.clVolume,
                 completedOn: this.state.completedOn,
                 createdOn: this.state.createdOn,
                 cya: this.state.cya,
                 fac: this.state.fac,
                 filterPressure1: this.state.filterPressure1,
-                filterPressure2: this.state.filterPressure2,
-                filterPressure3: this.state.filterPressure3,
-                filterPressure4: this.state.filterPressure4,
                 flowRate: this.state.flowRate,
-                orp: this.state.orp,
-                phController: this.state.phController,
-                phMan: this.state.phMan,
+                ph: this.state.ph,
                 ta: this.state.ta,
                 waterLevel: this.state.waterLevel,
                 whoChecked: this.state.whoChecked
@@ -120,19 +97,13 @@ export default class MainCompleteForm extends Component {
               this.setState({ 
                 cac: '',
                 ch: '',
-                clVolume: '',
                 completedOn: moment(),
                 createdOn: moment(),
                 cya: '',
                 fac: '',
                 filterPressure1: '',
-                filterPressure2: '',
-                filterPressure3: '',
-                filterPressure4: '',
                 flowRate: '',
-                orp: '',
-                phController: '',
-                phMan: '',
+                ph: '',
                 ta: '',
                 waterLevel: '',
                 whoChecked: '',
@@ -140,7 +111,7 @@ export default class MainCompleteForm extends Component {
             }}
           >
             <h3 className='form__title font-3rem'>
-              Main Pool Complete Log
+              Wading Pool Complete Log
             </h3>
             <Row className='log-form-row'>
               <FormGroup bsClass='flex-all-center'>
@@ -189,8 +160,8 @@ export default class MainCompleteForm extends Component {
                 <Col xs={4} sm={3}>
                   <FormControl
                     type='text'
-                    name='phMan'
-                    value={this.state.phMan}
+                    name='ph'
+                    value={this.state.ph}
                     onChange={this.handleInputChange}
                   />
                 </Col>
@@ -239,10 +210,10 @@ export default class MainCompleteForm extends Component {
             </Row>
             <Row className='log-form-row'>
               <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={2} className='flex-jc-center'>
+                <Col xs={4} sm={3} className='flex-jc-center'>
                   <ControlLabel>Flow Rate:</ControlLabel>
                 </Col>
-                <Col xs={4} sm={2}>
+                <Col xs={4} sm={3}>
                   <FormControl
                     type='text'
                     name='flowRate'
@@ -251,75 +222,6 @@ export default class MainCompleteForm extends Component {
                   />
                 </Col>
               </FormGroup>
-              <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={2} className='flex-jc-center'>
-                  <ControlLabel>CAC:</ControlLabel>
-                </Col>
-                <Col xs={4} sm={2}>
-                  <FormControl
-                    type='text'
-                    name='cac'
-                    value={this.state.cac}
-                    onChange={this.handleInputChange}
-                  />
-                </Col>
-              </FormGroup>
-              <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={2} className='flex-jc-center'>
-                  <ControlLabel>Water Level:</ControlLabel>
-                </Col>
-                <Col xs={4} sm={2}>
-                  <FormControl
-                    type='text'
-                    name='waterLevel'
-                    value={this.state.waterLevel}
-                    onChange={this.handleInputChange}
-                  />
-                </Col>
-              </FormGroup>
-            </Row>
-            <Row className='log-form-row'>
-              <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={2} className='flex-jc-center'>
-                  <ControlLabel>ORP:</ControlLabel>
-                </Col>
-                <Col xs={4} sm={2}>
-                  <FormControl
-                    type='text'
-                    name='orp'
-                    value={this.state.orp}
-                    onChange={this.handleInputChange}
-                  />
-                </Col>
-              </FormGroup>
-              <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={2} className='flex-jc-center'>
-                  <ControlLabel>pH Controller:</ControlLabel>
-                </Col>
-                <Col xs={4} sm={2}>
-                  <FormControl
-                    type='text'
-                    name='phController'
-                    value={this.state.phController}
-                    onChange={this.handleInputChange}
-                  />
-                </Col>
-              </FormGroup>
-              <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={2} className='flex-jc-center'>
-                  <ControlLabel>Cl Volume:</ControlLabel>
-                </Col>
-                <Col xs={4} sm={2}>
-                  <FormControl
-                    type='text'
-                    name='clVolume'
-                    value={this.state.clVolume}
-                    onChange={this.handleInputChange}
-                  />
-                </Col>
-              </FormGroup>
-            </Row>
-            <Row className='log-form-row'>
               <FormGroup bsClass='flex-all-center'>
                 <Col xs={4} sm={3} className='flex-jc-center'>
                   <ControlLabel>Filter 1:</ControlLabel>
@@ -333,43 +235,30 @@ export default class MainCompleteForm extends Component {
                   />
                 </Col>
               </FormGroup>
-              <FormGroup bsClass='flex-all-center'>
-                <Col xs={4} sm={3} className='flex-jc-center'>
-                  <ControlLabel>Filter 2:</ControlLabel>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <FormControl
-                    type='text'
-                    name='filterPressure2'
-                    value={this.state.filterPressure2}
-                    onChange={this.handleInputChange}
-                  />
-                </Col>
-              </FormGroup>
             </Row>
             <Row className='log-form-row'>
               <FormGroup bsClass='flex-all-center'>
                 <Col xs={4} sm={3} className='flex-jc-center'>
-                  <ControlLabel>Filter 3:</ControlLabel>
+                  <ControlLabel>CAC:</ControlLabel>
                 </Col>
                 <Col xs={4} sm={3}>
                   <FormControl
                     type='text'
-                    name='filterPressure3'
-                    value={this.state.filterPressure3}
+                    name='cac'
+                    value={this.state.cac}
                     onChange={this.handleInputChange}
                   />
                 </Col>
               </FormGroup>
               <FormGroup bsClass='flex-all-center'>
                 <Col xs={4} sm={3} className='flex-jc-center'>
-                  <ControlLabel>Filter 4:</ControlLabel>
+                  <ControlLabel>Water Level:</ControlLabel>
                 </Col>
                 <Col xs={4} sm={3}>
                   <FormControl
                     type='text'
-                    name='filterPressure4'
-                    value={this.state.filterPressure4}
+                    name='waterLevel'
+                    value={this.state.waterLevel}
                     onChange={this.handleInputChange}
                   />
                 </Col>
@@ -384,6 +273,3 @@ export default class MainCompleteForm extends Component {
     );
   }
 }
-
-
-
