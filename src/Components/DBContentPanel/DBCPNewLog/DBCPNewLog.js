@@ -4,6 +4,7 @@ import { Row } from 'react-bootstrap';
 import '../../../Sass/index.css';
 import FormOptBtns from '../../FormOptBtns/FormOptBtns';
 import MainCompleteForm from '../../Forms/MainCompleteForm/MainCompleteForm';
+import WadingCompleteForm from '../../Forms/WadingCompleteForm/WadingCompleteForm';
 
 export default class DBCPNewLog extends Component {
 
@@ -25,6 +26,7 @@ export default class DBCPNewLog extends Component {
           {this.state.formOpt ? (
             <div className='card w80'>
               {this.state.formOpt === 'main-complete' ? <MainCompleteForm /> : ''}
+              {this.state.formOpt === 'wading-complete' ? <WadingCompleteForm /> : ''}
             </div>
           ) : ''}
         </Row>
