@@ -5,6 +5,7 @@ import '../../../Sass/index.css';
 import FormOptBtns from '../../FormOptBtns/FormOptBtns';
 import MainCompleteForm from '../../Forms/MainCompleteForm/MainCompleteForm';
 import WadingCompleteForm from '../../Forms/WadingCompleteForm/WadingCompleteForm';
+import MaintenanceForm from '../../Forms/MaintenanceForm/MaintenanceForm';
 
 export default class DBCPNewLog extends Component {
 
@@ -27,6 +28,7 @@ export default class DBCPNewLog extends Component {
             <div className='card w80'>
               {this.state.formOpt === 'main-complete' ? <MainCompleteForm /> : ''}
               {this.state.formOpt === 'wading-complete' ? <WadingCompleteForm /> : ''}
+              {this.state.formOpt === 'maintenance' ? <MaintenanceForm /> : ''}
             </div>
           ) : ''}
         </Row>

@@ -13,6 +13,12 @@
 .ml-2 {
   margin-left: 3rem; }
 
+.mx-1 {
+  margin: 0 1rem; }
+
+.my-2 {
+  margin: 2rem 0; }
+
 .w60 {
   width: 60%; }
 

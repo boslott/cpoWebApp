@@ -89,7 +89,6 @@ export default class MainCompleteForm extends Component {
   }
 
   render() {
-    console.log(this.state.completedOn)
     return (
       <Mutation mutation={NEW_MAINPOOL_COMPLETE_LOG}>
         {(newMainPoolCompleteLog, {data}) => (
