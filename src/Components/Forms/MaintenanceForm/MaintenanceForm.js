@@ -6,6 +6,7 @@ import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 
 import '../../../Sass/index.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const NEW_MAINTENANCE_LOG = gql`
     mutation newMaintenanceLog(
